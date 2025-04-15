@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import SectionWrapper from "./SectionWrapper";
-import { SCHEMES, WORKOUTS } from "../utils/swoldier";
+import { SCHEMES, WORKOUTS } from "../utils/workout-plan";
 import Button from "./Button";
 
 function Header(props) {
