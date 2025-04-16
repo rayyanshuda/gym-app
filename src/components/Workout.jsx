@@ -7,8 +7,8 @@ export default function Workout(props) {
   return (
     <SectionWrapper
       id={"workout"}
-      header={"Welcome to"}
-      title={["The", "DANGER", "Zone"]}
+      header={"Built not Bought"}
+      title={["Make", "MUSCLES,", " Not", "EXCUSES"]}
     >
       <div className="flex flex-col gap-4">
         {workout.map((exercise, i) => {

@@ -10,20 +10,22 @@ export default function Hero() {
           Jugger<span className="text-blue-400">naut</span>
         </h1>
       </div>
+
       <p className="text-sm md:text-base font-light">
-        I hereby acknowledgement that I may become{" "}
+        Built for{" "}
         <span className="text-blue-400 font-medium">
-          unbelievably swolenormous
+          beginners, lifters, and beasts alike
         </span>{" "}
-        and accept all risks of becoming the local{" "}
-        <span className="text-blue-400 font-medium">mass montrosity</span>,
-        afflicted with severe body dismorphia, unable to fit through doors.
+        — this app helps you stay on track, crush your goals, and level up your
+        training one set at a time.{" "}
+        <span className="text-blue-400 font-medium">Let’s get started.</span>
       </p>
+
       <Button
         func={() => {
           window.location.href = "#generate";
         }}
-        text={"Accept & Begin"}
+        text={"Begin"}
       ></Button>
     </div>
   );

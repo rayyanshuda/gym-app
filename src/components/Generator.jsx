@@ -48,13 +48,13 @@ export default function Generator(props) {
 
     if (poison !== "individual") {
       setMuscles([muscleGroup]);
-      //setShowModal(false); // close modal
+      setShowModal(false); // close modal
       return;
     }
 
     setMuscles([...muscles, muscleGroup]);
     if (muscles.length === 2) {
-      //setShowModal(false); // close modal
+      setShowModal(false); // close modal
     }
   }
 
@@ -62,12 +62,12 @@ export default function Generator(props) {
     <SectionWrapper
       id={"generate"}
       header={"Generate Your Workout"}
-      title={["It's", "Huge", "o'clock"]}
+      title={["It's", "Huge", " o'clock"]}
     >
       <Header
         index={"01"}
         title={"Pick Your Poison"}
-        description={"Select the workout you wish to endure."}
+        description={"Pick a workout."}
       />
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
         {Object.keys(WORKOUTS).map((type, typeIndex) => {
@@ -79,7 +79,9 @@ export default function Generator(props) {
               }}
               className={
                 "bg-slate-950 border duration-200 px-4 hover:border-blue-600 py-3 rounded-lg cursor-pointer hover:cursor-pointer" +
-                (type === poison ? " border-blue-600" : "border-blue-400")
+                (type === poison
+                  ? " border-blue-600 border-2"
+                  : "border-blue-400")
               }
               key={typeIndex}
             >
@@ -91,8 +93,8 @@ export default function Generator(props) {
 
       <Header
         index={"02"}
-        title={"Lock On Targets"}
-        description={"Select the muscles judged for the annihilation"}
+        title={"Lock on Targets"}
+        description={"Select the muscles you want to train."}
       />
       <div className="bg-slate-950 border border-solid border-blue-400 rounded-lg flex flex-col">
         <button
@@ -102,7 +104,11 @@ export default function Generator(props) {
           <p className="capitalize">
             {muscles.length == 0 ? "Select muscle groups" : muscles.join(" ")}
           </p>
-          <i className="fa-solid absolute right-3 top-1/2 -translate-y-1/2 fa-caret-down"></i>
+          <i
+            className={`fa-solid absolute right-3 top-1/2 -translate-y-1/2 fa-caret-down duration-400 ${
+              showModal ? "rotate-90" : "rotate-0"
+            }`} //rotating the caret icon when clicked
+          ></i>
         </button>
         {showModal && (
           <div className="flex flex-col px-3 pb-3">
@@ -134,7 +140,7 @@ export default function Generator(props) {
       <Header
         index={"03"}
         title={"Become Juggernaut"}
-        description={"Select your ultimate objective."}
+        description={"Determine your ultimate objective."}
       />
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         {Object.keys(SCHEMES).map((scheme, schemeIndex) => {
@@ -145,7 +151,9 @@ export default function Generator(props) {
               }}
               className={
                 "bg-slate-950 border duration-200 hover:border-blue-600 py-3 rounded-lg px-4 cursor-pointer hover:cursor-pointer" +
-                (scheme === goal ? " border-blue-600" : "border-blue-400")
+                (scheme === goal
+                  ? " border-blue-600 border-2"
+                  : "border-blue-400")
               }
               key={schemeIndex}
             >
@@ -154,7 +162,7 @@ export default function Generator(props) {
           );
         })}
       </div>
-      <Button func={updateWorkout} text={"Formulate"}></Button>
+      <Button func={updateWorkout} text={"Formulate Workout"}></Button>
     </SectionWrapper>
   );
 }
