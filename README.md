@@ -1,12 +1,27 @@
-# React + Vite
+# 🏋️ Juggernaut Gym App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a personal project I made to help people (including myself) build gym workouts more easily. The app lets you:
 
-Currently, two official plugins are available:
+- Pick what kind of workout plan you're into (individual muscle focus, bro split, bodybuilder-style, or upper/lower split)
+- Choose the exact muscle groups you want to target
+- Select your overall gym goal — whether that’s **strength & power**, **growth & hypertrophy**, or **cardiovascular endurance**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+After making your picks, the app generates a complete workout plan for you. It also lets you **track how many sets you’ve completed**, and gives you detailed descriptions for each workout so you know what you're doing.
 
-## Expanding the ESLint configuration
+## 🚀 Live Site
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Check it out here 👉 [Juggernaut Gym App](https://rayyanshuda-gym-app.netlify.app/)
+
+## 🛠 Built With
+
+- **React** + **Vite** — for a fast, modern front-end
+- **TailwindCSS** — to style everything clean and responsive
+- **JavaScript** — to handle all the logic and state management
+
+## 💡 Why I Made It
+
+I wanted something lightweight and custom for my own gym routines, so I built this to quickly generate workouts based on what I felt like doing each day.
+
+---
+
+Feel free to clone it, fork it, or just use it to get swole 💪
