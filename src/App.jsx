@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Hero from "./components/Hero";
 import Generator from "./components/Generator";
 import Workout from "./components/Workout";
@@ -16,9 +16,17 @@ function App() {
     }
     let newWorkout = generateWorkout({ poison, muscles, goal });
     setWorkout(newWorkout);
-
-    window.location.href = "#workout";
   }
+
+  // Scroll to the #workout section when a workout is generated
+  useEffect(() => {
+    if (workout) {
+      const workoutSection = document.getElementById("workout");
+      if (workoutSection) {
+        workoutSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [workout]);
 
   return (
     <main className="min-h-screen flex flex-col bg-gradient-to-r from-slate-800 to-slate-950 text-white text-sm sm:text-base">
